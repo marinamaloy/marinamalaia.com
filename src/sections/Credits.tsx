@@ -12,12 +12,13 @@ interface Project {
   genre: string;
   platform: string;
   released: boolean;
+  image?: string;
 }
 
 const projects: Project[] = [
   {
     year: '2025',
-    title: 'Limited time, Infinite pull',
+    title: 'Limited Time, Infinite Pull',
     titleChinese: '',
     category: 'Short Drama',
     role: 'Luna',
@@ -39,7 +40,7 @@ const projects: Project[] = [
   },
   {
     year: '2025',
-    title: 'When the love shot backwards',
+    title: 'When the Love Shot Backwards',
     titleChinese: '',
     category: 'Short Drama',
     role: 'Alex',
@@ -50,7 +51,7 @@ const projects: Project[] = [
   },
   {
     year: '2024',
-    title: 'Mommy by Day, CEO\'s wife by night',
+    title: 'Mommy by Day, CEO\'s Wife by Night',
     titleChinese: '',
     category: 'Short Drama',
     role: 'Jessica',
@@ -61,7 +62,7 @@ const projects: Project[] = [
   },
   {
     year: '2023',
-    title: 'The lost Heiress of Bilionaire family',
+    title: 'The Lost Heiress of Bilionaire Family',
     titleChinese: '',
     category: 'Short Drama',
     role: 'Emma',
@@ -72,7 +73,7 @@ const projects: Project[] = [
   },
   {
     year: '2025',
-    title: 'The queen reclaims her throne',
+    title: 'The Queen Reclaims her Throne',
     titleChinese: '',
     category: 'Short Drama',
     role: 'Rachel',
@@ -136,28 +137,7 @@ const projects: Project[] = [
     platform: 'Mango TV',
     released: true,
   },
-  {
-    year: '2021',
-    title: 'Sunshine of My Life',
-    titleChinese: '若你安好便是晴天',
-    category: 'TV Series',
-    role: 'Store Manager',
-    roleType: 'Recurring',
-    genre: 'Urban Romance',
-    platform: 'Dragon TV',
-    released: false,
-  },
-  {
-    year: '2021',
-    title: 'The Justice',
-    titleChinese: '光芒',
-    category: 'TV Series',
-    role: 'Mrs. Kane',
-    roleType: 'Co-Star',
-    genre: 'Modern Legend',
-    platform: 'iQIYI',
-    released: true,
-  },
+  
   {
     year: '2021',
     title: 'Karl Marx',
@@ -179,6 +159,7 @@ const projects: Project[] = [
     genre: 'Olympic Drama',
     platform: 'CCTV-6',
     released: true,
+    image: '/images/credits/heart.jpeg',
   },
   {
     year: '2021',
@@ -206,7 +187,7 @@ const projects: Project[] = [
     year: '2023',
     title: 'Harbin Memories',
     titleChinese: '哈尔滨往事之不归之路',
-    category: 'TV Movie',
+    category: 'TV Series',
     role: 'Emma Hohenzollern',
     roleType: 'Regular',
     genre: 'Historical Epic',
@@ -235,17 +216,7 @@ const projects: Project[] = [
     platform: 'Unreleased',
     released: false,
   },
-  {
-    year: '2021',
-    title: 'Go Go Squid 2',
-    titleChinese: '我的时代，你的时代',
-    category: 'TV Series',
-    role: 'Alice',
-    roleType: 'Co-Star',
-    genre: 'Urban Romance',
-    platform: 'iQIYI',
-    released: true,
-  },
+  
   {
     year: '2024',
     title: 'Escape from the 21st Century',
@@ -267,6 +238,7 @@ const projects: Project[] = [
     genre: 'Family Drama',
     platform: 'CCTV-1',
     released: true,
+    image: '/images/credits/aomen.jpg',
   },
   {
     year: '2021',
@@ -314,7 +286,7 @@ const filters: { key: FilterType; labelKey: string; icon: typeof Film }[] = [
 
 export function Credits() {
   const { t, language } = useLanguage();
-  const [activeFilter, setActiveFilter] = useState<FilterType>('all');
+  const [activeFilter, setActiveFilter] = useState<FilterType>('film');
 
   const filteredProjects = projects.filter((project) => {
     if (activeFilter === 'all') return true;
@@ -395,14 +367,34 @@ export function Credits() {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project, index) => (
-            <div
-              key={`${project.title}-${index}`}
-              className="rounded-xl p-6 transition-all duration-300 hover:scale-[1.02]"
-              style={{
-                backgroundColor: 'var(--theme-card)',
-                border: `1px solid var(--theme-border)`,
-              }}
-            >
+  <div
+    key={`${project.title}-${index}`}
+    className="relative overflow-hidden rounded-xl transition-all duration-300 hover:scale-[1.02]"
+    style={{
+      border: `1px solid var(--theme-border)`,
+    }}
+  >
+    {/* Фоновое изображение (только если есть) */}
+    {project.image && (
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: `url(${project.image})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: 1, // настройте под себя
+        }}
+      />
+    )}
+
+    {/* Затемняющий слой для читаемости текста (можно сделать условным, если нужно) */}
+    {/* <div
+      className="absolute inset-0"
+      style={{
+        backgroundColor: 'rgba(0, 0, 0, 0.1)',
+      }}
+    /> */}
+     <div className="relative z-10 p-6">
               {/* Header */}
               <div className="flex items-start justify-between mb-4">
                 <div>
@@ -467,6 +459,7 @@ export function Credits() {
                 </div>
               </div>
             </div>
+    </div> 
           ))}
         </div>
       </div>
