@@ -276,18 +276,24 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   };
 
   const t = (key: string): string => {
-    const keys = key.split('.');
-    let value: any = translations[language];
-    for (const k of keys) {
-      if (value && typeof value === 'object' && k in value) {
-        value = value[k];
-      } else {
-        return key;
-      }
+  // Сначала проверяем точное совпадение ключа (например 'hero.about.title')
+  const exactMatch = (translations[language] as Record<string, string>)[key];
+  if (exactMatch) {
+    return exactMatch;
+  }
+  
+  // Если точного совпадения нет, пробуем искать во вложенной структуре
+  const keys = key.split('.');
+  let value: any = translations[language];
+  for (const k of keys) {
+    if (value && typeof value === 'object' && k in value) {
+      value = value[k];
+    } else {
+      return key;
     }
-    return typeof value === 'string' ? value : key;
-  };
-
+  }
+  return typeof value === 'string' ? value : key;
+};
   useEffect(() => {
     document.documentElement.setAttribute('lang', language);
   }, [language]);
