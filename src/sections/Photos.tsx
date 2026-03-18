@@ -5,12 +5,12 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Operative theme photos
 const operativePhotos = [
-  '/images/operative/operative 1.jpg',
+  '/images/operative/operative 1.JPG',
   '/images/operative/operative 3.jpg',
   '/images/operative/operative 4.jpg',
-  '/images/operative/operative 5.JPG',
+  '/images/operative/operative 5.jpeg',
   '/images/operative/operative 6.jpg',
-  '/images/operative/operative 7.jpeg',
+  '/images/operative/operative 7.JPG',
   '/images/operative/operative 8.JPG',
   '/images/operative/operative 9.JPG',
   '/images/operative/operative 10.JPG',
@@ -18,8 +18,8 @@ const operativePhotos = [
   '/images/operative/operative 12.jpg',
   '/images/operative/operative 13.jpeg',
   '/images/operative/operative 14.jpeg',
-  '/images/operative/operative 15.JPG',
-  '/images/operative/operative 16.jpeg',
+  '/images/operative/operative 15.jpeg',
+  '/images/operative/operative 16.jpg',
   '/images/operative/operative 17.jpeg',
 ];
 
