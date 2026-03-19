@@ -13,6 +13,8 @@ interface Project {
   platform: string;
   released: boolean;
   image?: string;
+  link?: string;           // Ссылка на проект
+  backgroundImage?: string; // Путь к фоновому изображению
 }
 
 const projects: Project[] = [
@@ -26,6 +28,8 @@ const projects: Project[] = [
     genre: 'Short Drama',
     platform: 'Short Max',
     released: true,
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2024',
@@ -37,6 +41,8 @@ const projects: Project[] = [
     genre: 'Short Drama',
     platform: 'Short Max',
     released: true,
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2025',
@@ -48,6 +54,8 @@ const projects: Project[] = [
     genre: 'Short Drama',
     platform: 'Net Short',
     released: true,
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2024',
@@ -59,6 +67,8 @@ const projects: Project[] = [
     genre: 'Short Drama',
     platform: 'FlickReels',
     released: true,
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2023',
@@ -70,6 +80,8 @@ const projects: Project[] = [
     genre: 'Short Drama',
     platform: 'FlickReels',
     released: true,
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2025',
@@ -81,6 +93,8 @@ const projects: Project[] = [
     genre: 'Short Drama',
     platform: 'Happy Short',
     released: true,
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2025',
@@ -92,6 +106,8 @@ const projects: Project[] = [
     genre: 'Action / Sniper',
     platform: 'CCTV-6',
     released: false,
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2026',
@@ -103,6 +119,8 @@ const projects: Project[] = [
     genre: 'Science Fiction',
     platform: 'iQIYI',
     released: false,
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2021',
@@ -114,6 +132,8 @@ const projects: Project[] = [
     genre: 'Traditional Comedy',
     platform: 'Unreleased',
     released: false,
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2021',
@@ -125,6 +145,8 @@ const projects: Project[] = [
     genre: 'Medical Drama',
     platform: 'Tencent Video',
     released: true,
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2020',
@@ -136,6 +158,8 @@ const projects: Project[] = [
     genre: 'Urban Drama',
     platform: 'Mango TV',
     released: true,
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '', // ← Вставьте путь к изображению здесь
   },
   
   {
@@ -148,6 +172,8 @@ const projects: Project[] = [
     genre: 'Historical Drama',
     platform: 'Cinema',
     released: false,
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2024',
@@ -160,6 +186,8 @@ const projects: Project[] = [
     platform: 'CCTV-6',
     released: true,
     image: '/images/credits/heart.jpeg',
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '/images/credits/heart.jpeg', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2021',
@@ -171,6 +199,8 @@ const projects: Project[] = [
     genre: 'Sci-fi Thriller',
     platform: 'iQIYI',
     released: true,
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2021',
@@ -182,6 +212,8 @@ const projects: Project[] = [
     genre: 'Disaster Thriller',
     platform: 'iQIYI',
     released: true,
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2023',
@@ -193,6 +225,8 @@ const projects: Project[] = [
     genre: 'Historical Epic',
     platform: 'CCTV-6',
     released: true,
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2022',
@@ -204,6 +238,8 @@ const projects: Project[] = [
     genre: 'Military War',
     platform: 'CCTV-6',
     released: true,
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2030',
@@ -215,6 +251,8 @@ const projects: Project[] = [
     genre: 'Theatrical Drama',
     platform: 'Unreleased',
     released: false,
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '', // ← Вставьте путь к изображению здесь
   },
   
   {
@@ -227,6 +265,8 @@ const projects: Project[] = [
     genre: 'Romantic Sci-fi',
     platform: 'Cinema',
     released: true,
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2019',
@@ -239,6 +279,8 @@ const projects: Project[] = [
     platform: 'CCTV-1',
     released: true,
     image: '/images/credits/aomen.jpg',
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '/images/credits/aomen.jpg', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2021',
@@ -250,6 +292,8 @@ const projects: Project[] = [
     genre: 'Suspense Drama',
     platform: 'Tencent Video',
     released: true,
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2017',
@@ -261,6 +305,8 @@ const projects: Project[] = [
     genre: 'Rural Drama',
     platform: 'CCTV-1',
     released: true,
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2030',
@@ -272,6 +318,8 @@ const projects: Project[] = [
     genre: 'Period Drama',
     platform: 'iQIYI',
     released: false,
+    link: '', // ← Вставьте ссылку здесь
+  backgroundImage: '', // ← Вставьте путь к изображению здесь
   },
 ];
 
@@ -311,6 +359,13 @@ export function Credits() {
     }
   };
 
+  const handleProjectClick = (project: Project) => {
+  if (project.link && project.link.trim() !== '') {
+    window.open(project.link, '_blank', 'noopener,noreferrer');
+  }
+};
+
+  
   const getDisplayTitle = (project: Project) => {
     if (language === 'zh' && project.titleChinese) {
       return project.titleChinese;
@@ -367,7 +422,28 @@ export function Credits() {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project, index) => (
-  <div
+  
+     <div
+  onClick={() => handleProjectClick(project)}
+  className={`... ${project.link ? 'cursor-pointer' : 'cursor-default'}`}
+>
+  {/* Фоновое изображение */}
+  {project.backgroundImage && (
+    <div
+      className="absolute inset-0 opacity-10"
+      style={{
+        backgroundImage: `url(${project.backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    />
+  )}
+  
+  {/* Иконка ссылки, если есть link */}
+  {project.link && <ExternalLink size={14} />}
+</div> 
+      
+      <div
     key={`${project.title}-${index}`}
     className="relative overflow-hidden rounded-xl transition-all duration-300 hover:scale-[1.02]"
     style={{
