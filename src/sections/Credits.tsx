@@ -93,7 +93,7 @@ const projects: Project[] = [
     platform: 'Happy Short',
     released: true,
     link: '',
-    backgroundImage: '',
+    backgroundImage: '/images/credits/queen.JPG',
   },
   {
     year: '2025',
