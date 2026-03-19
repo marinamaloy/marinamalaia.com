@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { Film, Tv, Clapperboard, Star, Calendar, User, Tag, Monitor } from 'lucide-react';
+import { Film, Tv, Clapperboard, Star, Calendar, User, Tag, Monitor,ExternalLink } from 'lucide-react';
 
 interface Project {
   year: string;
@@ -185,9 +185,8 @@ const projects: Project[] = [
     genre: 'Olympic Drama',
     platform: 'CCTV-6',
     released: true,
-    image: '/images/credits/heart.jpeg',
-    link: '.https://vip.1905.com/play/1657547.shtml?__hz=1aa48fc4880bb0c9&fr=baidu_aladdin_vip_add', // ← Вставьте ссылку здесь
-  backgroundImage: 'images/credits/heart.jpeg', // ← Вставьте путь к изображению здесь
+    link: 'https://vip.1905.com/play/1657547.shtml?__hz=1aa48fc4880bb0c9&fr=baidu_aladdin_vip_add', // ← Вставьте ссылку здесь
+  backgroundImage: '/images/credits/heart.jpeg', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2021',
@@ -278,7 +277,6 @@ const projects: Project[] = [
     genre: 'Family Drama',
     platform: 'CCTV-1',
     released: true,
-    image: '/images/credits/aomen.jpg',
     link: '', // ← Вставьте ссылку здесь
   backgroundImage: '/images/credits/aomen.jpg', // ← Вставьте путь к изображению здесь
   },
@@ -422,46 +420,38 @@ export function Credits() {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project, index) => (
-  
-     <div
-  onClick={() => handleProjectClick(project)}
-  className={`... ${project.link ? 'cursor-pointer' : 'cursor-default'}`}
->
-  {/* Фоновое изображение */}
-  {project.backgroundImage && (
-    <div
-      className="absolute inset-0 opacity-10"
-      style={{
-        backgroundImage: `url(${project.backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    />
-  )}
-  
-  {/* Иконка ссылки, если есть link */}
-  {project.link && <ExternalLink size={14} />}
-</div> 
       
       <div
     key={`${project.title}-${index}`}
-    className="relative overflow-hidden rounded-xl transition-all duration-300 hover:scale-[1.02]"
-    style={{
-      border: `1px solid var(--theme-border)`,
-    }}
-  >
-    {/* Фоновое изображение (только если есть) */}
-    {project.image && (
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `url(${project.image})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: 1, // настройте под себя
-        }}
-      />
-    )}
+        onClick={() => handleProjectClick(project)}
+  className={`rounded-xl p-6 transition-all duration-300 hover:scale-[1.02] relative overflow-hidden group ${
+                project.link && project.link.trim() !== '' ? 'cursor-pointer' : 'cursor-default'
+              }`}
+              style={{
+                backgroundColor: 'var(--theme-card)',
+                border: `1px solid var(--theme-border)`,
+              }}
+            >
+  {/* Фоновое изображение */}
+  {project.backgroundImage && project.backgroundImage.trim() !== '' && (
+                <div
+                  className="absolute inset-0 opacity-10 group-hover:opacity-15 transition-opacity duration-300"
+                  style={{
+                    backgroundImage: `url(${project.backgroundImage})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
+                />
+              )}
+  
+  {/* Иконка ссылки, если есть link */}
+  {project.link && (
+                <ExternalLink
+                  size={14}
+                  className="absolute top-2 right-2 z-20"
+                  style={{ color: 'var(--theme-accent)' }}
+                />
+              )}
 
     {/* Затемняющий слой для читаемости текста (можно сделать условным, если нужно) */}
     {/* <div
@@ -470,16 +460,19 @@ export function Credits() {
         backgroundColor: 'rgba(0, 0, 0, 0.1)',
       }}
     /> */}
-     <div className="relative z-10 p-6">
+     <div className="relative z-10">
               {/* Header */}
               <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3
-                    className="text-lg font-semibold mb-1"
-                    style={{ color: 'var(--theme-text)' }}
-                  >
-                    {getDisplayTitle(project)}
-                  </h3>
+                  <div className="flex-1 pr-2">
+                    <h3
+                      className="text-lg font-semibold mb-1 flex items-center gap-2"
+                      style={{ color: 'var(--theme-text)' }}
+                    >
+                      {getDisplayTitle(project)}
+                      {project.link && project.link.trim() !== '' && (
+                        <ExternalLink size={14} style={{ color: 'var(--theme-accent)' }} />
+                      )}
+                    </h3>
                   <div
                     className="flex items-center gap-1 text-sm"
                     style={{ color: 'var(--theme-text-muted)' }}
