@@ -27,7 +27,7 @@ export function ThemeSwitcher() {
         aria-label="Switch to Operative theme"
       >
         <Briefcase size={14} />
-        <span {t('theme.operative') as string}</span>
+        <span> {t('theme.operative') as string}</span>
       </button>
       <button
         onClick={() => setTheme('period')}
@@ -42,7 +42,7 @@ export function ThemeSwitcher() {
         aria-label="Switch to Period theme"
       >
         <Crown size={14} />
-        <span {t('theme.period') as string}</span>
+        <span> {t('theme.period') as string}</span>
       </button>
     </div>
   );
