@@ -57,7 +57,7 @@ export function Navigation() {
               className="text-xl font-semibold tracking-wide"
               style={{ color: 'var(--theme-text)' }}
             >
-              Marina Malaia
+              Marina
             </a>
 
             {/* Desktop Navigation */}
