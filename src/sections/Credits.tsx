@@ -435,14 +435,22 @@ export function Credits() {
   {/* Фоновое изображение */}
   {project.backgroundImage && project.backgroundImage.trim() !== '' && (
                 <div
-                  className="absolute inset-0 opacity-10 group-hover:opacity-15 transition-opacity duration-300"
+                  className="absolute inset-0 transition-opacity duration-300"
                   style={{
                     backgroundImage: `url(${project.backgroundImage})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
+                    opacity: 0.35,
                   }}
                 />
+              <div
+  className="absolute inset-0"
+  style={{
+    background: 'linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 100%)',
+  }}
+/>
               )}
+        
   
   {/* Иконка ссылки, если есть link */}
   {project.link && (
