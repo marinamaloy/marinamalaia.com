@@ -40,7 +40,7 @@
     --theme-border: #30363d;
     --theme-card: #21262d;
     --theme-font-heading: 'Montserrat', 'Noto Sans SC', sans-serif;
-    --theme-font-body: 'Inter', 'Noto Sans SC', sans-serif;
+    --theme-font-body: 'Montserrat', 'Noto Sans SC', sans-serif;
   }
 
   /* Period Theme - Light, Elegant, Historical */
@@ -162,6 +162,7 @@
   outline-offset: 2px;
 }
 
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -188,4 +189,3 @@
 .animate-fade-in {
   animation: fade-in 0.2s ease-out;
 }
-
