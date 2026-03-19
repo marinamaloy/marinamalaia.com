@@ -9,6 +9,7 @@ interface ContactLink {
   value: string;
   href: string;
   external?: boolean;
+  isWeChat?: boolean;
 }
 
 export function Contact() {
