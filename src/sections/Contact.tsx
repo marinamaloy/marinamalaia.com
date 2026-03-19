@@ -107,20 +107,51 @@ export function Contact() {
   return (
     <button
       onClick={(e) => handleWeChatClick(e, link.value)}
-      className="w-full flex items-center gap-4 p-4 rounded-xl ... relative group"
-    >
-      {/* ... контент ... */}
+      className="w-full flex items-center gap-4 p-4 rounded-xl transition-all duration-300 hover:scale-[1.02] text-left relative group"
+                      style={{
+                        backgroundColor: 'var(--theme-card)',
+                        border: `1px solid var(--theme-border)`,
+                      }}
+                    >
+                      <div
+                        className="w-12 h-12 rounded-full flex items-center justify-center"
+                        style={{ backgroundColor: 'var(--theme-bg-secondary)' }}
+                      >
+                        <Icon size={20} style={{ color: 'var(--theme-accent)' }} />
+                      </div>
+                      <div className="flex-1">
+                        <p
+                          className="text-sm mb-1"
+                          style={{ color: 'var(--theme-text-muted)' }}
+                        >
+                          {t(link.label) as string}
+                        </p>
+                        <p
+                          className="font-medium"
+                          style={{ color: 'var(--theme-text)' }}
+                        >
+                          {link.value}
+                        </p>
+                      </div>
       
       {/* Иконка копирования при наведении */}
-      <div className="opacity-0 group-hover:opacity-100">
+      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        style={{ color: 'var(--theme-accent)' }}
+                      >
         {copied ? <Check size={20} /> : <Copy size={20} />}
       </div>
       
       {/* Tooltip "Copied!" */}
       {copied && (
-        <div className="absolute -top-10 right-4 px-3 py-1.5 rounded-lg ... animate-fade-in">
-          Copied!
-        </div>
+                        <div
+                          className="absolute -top-10 right-4 px-3 py-1.5 rounded-lg text-sm font-medium shadow-lg animate-fade-in"
+                          style={{
+                            backgroundColor: 'var(--theme-accent)',
+                            color: 'white',
+                          }}
+                        >
+                          Copied!
+                        </div>
       )}
     </button>
   );
