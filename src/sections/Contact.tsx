@@ -1,5 +1,7 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import { Mail, MessageCircle, ExternalLink, Instagram, Film } from 'lucide-react';
+import { useState } from 'react';
+import { Check, Copy } from 'lucide-react';
 
 interface ContactLink {
   icon: typeof Mail;
@@ -11,6 +13,18 @@ interface ContactLink {
 
 export function Contact() {
   const { t } = useLanguage();
+  const [copied, setCopied] = useState(false);
+
+  const handleWeChatClick = async (e: React.MouseEvent, value: string) => {
+  e.preventDefault();
+  try {
+    await navigator.clipboard.writeText(value);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  } catch (err) {
+    console.error('Failed to copy:', err);
+  }
+};
 
   const contactLinks: ContactLink[] = [
     {
@@ -24,6 +38,7 @@ export function Contact() {
       label: 'contact.wechat',
       value: 'MMaloy',
       href: '#',
+      isWeChat: true,
     },
   ];
 
@@ -86,7 +101,31 @@ export function Contact() {
             <div className="space-y-4 mb-8">
               {contactLinks.map((link, index) => {
                 const Icon = link.icon;
-                return (
+      const isWeChat = link.isWeChat;
+                if (isWeChat) {
+  return (
+    <button
+      onClick={(e) => handleWeChatClick(e, link.value)}
+      className="w-full flex items-center gap-4 p-4 rounded-xl ... relative group"
+    >
+      {/* ... контент ... */}
+      
+      {/* Иконка копирования при наведении */}
+      <div className="opacity-0 group-hover:opacity-100">
+        {copied ? <Check size={20} /> : <Copy size={20} />}
+      </div>
+      
+      {/* Tooltip "Copied!" */}
+      {copied && (
+        <div className="absolute -top-10 right-4 px-3 py-1.5 rounded-lg ... animate-fade-in">
+          Copied!
+        </div>
+      )}
+    </button>
+  );
+}
+      
+      return (
                   <a
                     key={index}
                     href={link.href}
