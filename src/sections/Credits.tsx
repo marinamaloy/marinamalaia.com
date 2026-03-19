@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { Film, Tv, Clapperboard, Star, Calendar, User, Tag, Monitor,ExternalLink } from 'lucide-react';
+import { Film, Tv, Clapperboard, Star, Calendar, User, Tag, Monitor, ExternalLink } from 'lucide-react';
 
 interface Project {
   year: string;
@@ -12,15 +12,14 @@ interface Project {
   genre: string;
   platform: string;
   released: boolean;
-  image?: string;
-  link?: string;           // Ссылка на проект
-  backgroundImage?: string; // Путь к фоновому изображению
+  link?: string;
+  backgroundImage?: string;
 }
 
 const projects: Project[] = [
   {
     year: '2025',
-    title: 'Limited Time, Infinite Pull',
+    title: 'Limited time, Infinite pull',
     titleChinese: '',
     category: 'Short Drama',
     role: 'Luna',
@@ -28,8 +27,8 @@ const projects: Project[] = [
     genre: 'Short Drama',
     platform: 'Short Max',
     released: true,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '', // ← Вставьте путь к изображению здесь
+    link: '', // Добавьте ссылку здесь
+    backgroundImage: '', // Добавьте путь к изображению здесь
   },
   {
     year: '2024',
@@ -41,12 +40,12 @@ const projects: Project[] = [
     genre: 'Short Drama',
     platform: 'Short Max',
     released: true,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '', // ← Вставьте путь к изображению здесь
+    link: '',
+    backgroundImage: '',
   },
   {
     year: '2025',
-    title: 'When the Love Shot Backwards',
+    title: 'When the love shot backwards',
     titleChinese: '',
     category: 'Short Drama',
     role: 'Alex',
@@ -54,12 +53,12 @@ const projects: Project[] = [
     genre: 'Short Drama',
     platform: 'Net Short',
     released: true,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '', // ← Вставьте путь к изображению здесь
+    link: '',
+    backgroundImage: '',
   },
   {
     year: '2024',
-    title: 'Mommy by Day, CEO\'s Wife by Night',
+    title: 'Mommy by Day, CEO\'s wife by night',
     titleChinese: '',
     category: 'Short Drama',
     role: 'Jessica',
@@ -67,12 +66,12 @@ const projects: Project[] = [
     genre: 'Short Drama',
     platform: 'FlickReels',
     released: true,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '', // ← Вставьте путь к изображению здесь
+    link: '',
+    backgroundImage: '',
   },
   {
     year: '2023',
-    title: 'The Lost Heiress of Bilionaire Family',
+    title: 'The lost Heiress of Bilionaire family',
     titleChinese: '',
     category: 'Short Drama',
     role: 'Emma',
@@ -80,12 +79,12 @@ const projects: Project[] = [
     genre: 'Short Drama',
     platform: 'FlickReels',
     released: true,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '', // ← Вставьте путь к изображению здесь
+    link: '',
+    backgroundImage: '',
   },
   {
     year: '2025',
-    title: 'The Queen Reclaims her Throne',
+    title: 'The queen reclaims her throne',
     titleChinese: '',
     category: 'Short Drama',
     role: 'Rachel',
@@ -93,8 +92,8 @@ const projects: Project[] = [
     genre: 'Short Drama',
     platform: 'Happy Short',
     released: true,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '', // ← Вставьте путь к изображению здесь
+    link: '',
+    backgroundImage: '',
   },
   {
     year: '2025',
@@ -106,8 +105,8 @@ const projects: Project[] = [
     genre: 'Action / Sniper',
     platform: 'CCTV-6',
     released: false,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '', // ← Вставьте путь к изображению здесь
+    link: '',
+    backgroundImage: '',
   },
   {
     year: '2026',
@@ -119,8 +118,8 @@ const projects: Project[] = [
     genre: 'Science Fiction',
     platform: 'iQIYI',
     released: false,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '', // ← Вставьте путь к изображению здесь
+    link: '',
+    backgroundImage: '',
   },
   {
     year: '2021',
@@ -132,8 +131,8 @@ const projects: Project[] = [
     genre: 'Traditional Comedy',
     platform: 'Unreleased',
     released: false,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '', // ← Вставьте путь к изображению здесь
+    link: '',
+    backgroundImage: '',
   },
   {
     year: '2021',
@@ -145,8 +144,8 @@ const projects: Project[] = [
     genre: 'Medical Drama',
     platform: 'Tencent Video',
     released: true,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '', // ← Вставьте путь к изображению здесь
+    link: '',
+    backgroundImage: '',
   },
   {
     year: '2020',
@@ -158,10 +157,22 @@ const projects: Project[] = [
     genre: 'Urban Drama',
     platform: 'Mango TV',
     released: true,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '', // ← Вставьте путь к изображению здесь
+    link: '',
+    backgroundImage: '',
   },
-  
+  {
+    year: '2021',
+    title: 'Sunshine of My Life',
+    titleChinese: '若你安好便是晴天',
+    category: 'TV Series',
+    role: 'Store Manager',
+    roleType: 'Recurring',
+    genre: 'Urban Romance',
+    platform: 'Dragon TV',
+    released: false,
+    link: '',
+    backgroundImage: '',
+  },
   {
     year: '2021',
     title: 'Karl Marx',
@@ -172,8 +183,8 @@ const projects: Project[] = [
     genre: 'Historical Drama',
     platform: 'Cinema',
     released: false,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '', // ← Вставьте путь к изображению здесь
+    link: '',
+    backgroundImage: '',
   },
   {
     year: '2024',
@@ -185,8 +196,8 @@ const projects: Project[] = [
     genre: 'Olympic Drama',
     platform: 'CCTV-6',
     released: true,
-    link: 'https://vip.1905.com/play/1657547.shtml?__hz=1aa48fc4880bb0c9&fr=baidu_aladdin_vip_add', // ← Вставьте ссылку здесь
-  backgroundImage: '/images/credits/heart.jpeg', // ← Вставьте путь к изображению здесь
+    link: 'https://vip.1905.com/play/1657547.shtml?__hz=1aa48fc4880bb0c9&fr=baidu_aladdin_vip_add',
+    backgroundImage: '/images/credits/heart.jpeg',
   },
   {
     year: '2021',
@@ -198,8 +209,8 @@ const projects: Project[] = [
     genre: 'Sci-fi Thriller',
     platform: 'iQIYI',
     released: true,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '', // ← Вставьте путь к изображению здесь
+    link: '',
+    backgroundImage: '',
   },
   {
     year: '2021',
@@ -211,21 +222,21 @@ const projects: Project[] = [
     genre: 'Disaster Thriller',
     platform: 'iQIYI',
     released: true,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '', // ← Вставьте путь к изображению здесь
+    link: '',
+    backgroundImage: '',
   },
   {
     year: '2023',
     title: 'Harbin Memories',
     titleChinese: '哈尔滨往事之不归之路',
-    category: 'TV Series',
+    category: 'TV Movie',
     role: 'Emma Hohenzollern',
     roleType: 'Regular',
     genre: 'Historical Epic',
     platform: 'CCTV-6',
     released: true,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '', // ← Вставьте путь к изображению здесь
+    link: '',
+    backgroundImage: '',
   },
   {
     year: '2022',
@@ -237,8 +248,8 @@ const projects: Project[] = [
     genre: 'Military War',
     platform: 'CCTV-6',
     released: true,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '', // ← Вставьте путь к изображению здесь
+    link: '',
+    backgroundImage: '',
   },
   {
     year: '2030',
@@ -250,8 +261,8 @@ const projects: Project[] = [
     genre: 'Theatrical Drama',
     platform: 'Unreleased',
     released: false,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '', // ← Вставьте путь к изображению здесь
+    link: '',
+    backgroundImage: '',
   },
   
   {
@@ -264,8 +275,8 @@ const projects: Project[] = [
     genre: 'Romantic Sci-fi',
     platform: 'Cinema',
     released: true,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '', // ← Вставьте путь к изображению здесь
+    link: '',
+    backgroundImage: '',
   },
   {
     year: '2019',
@@ -277,8 +288,8 @@ const projects: Project[] = [
     genre: 'Family Drama',
     platform: 'CCTV-1',
     released: true,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '/images/credits/aomen.jpg', // ← Вставьте путь к изображению здесь
+    link: '',
+    backgroundImage: '/images/credits/aomen.jpg',
   },
   {
     year: '2021',
@@ -290,8 +301,8 @@ const projects: Project[] = [
     genre: 'Suspense Drama',
     platform: 'Tencent Video',
     released: true,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '', // ← Вставьте путь к изображению здесь
+    link: '',
+    backgroundImage: '',
   },
   {
     year: '2017',
@@ -303,8 +314,8 @@ const projects: Project[] = [
     genre: 'Rural Drama',
     platform: 'CCTV-1',
     released: true,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '', // ← Вставьте путь к изображению здесь
+    link: '',
+    backgroundImage: '',
   },
   {
     year: '2030',
@@ -316,8 +327,8 @@ const projects: Project[] = [
     genre: 'Period Drama',
     platform: 'iQIYI',
     released: false,
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '', // ← Вставьте путь к изображению здесь
+    link: '',
+    backgroundImage: '',
   },
 ];
 
@@ -357,18 +368,17 @@ export function Credits() {
     }
   };
 
-  const handleProjectClick = (project: Project) => {
-  if (project.link && project.link.trim() !== '') {
-    window.open(project.link, '_blank', 'noopener,noreferrer');
-  }
-};
-
-  
   const getDisplayTitle = (project: Project) => {
     if (language === 'zh' && project.titleChinese) {
       return project.titleChinese;
     }
     return project.title;
+  };
+
+  const handleProjectClick = (project: Project) => {
+    if (project.link && project.link.trim() !== '') {
+      window.open(project.link, '_blank', 'noopener,noreferrer');
+    }
   };
 
   return (
@@ -420,11 +430,10 @@ export function Credits() {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project, index) => (
-      
-      <div
-    key={`${project.title}-${index}`}
-        onClick={() => handleProjectClick(project)}
-  className={`rounded-xl p-6 transition-all duration-300 hover:scale-[1.02] relative overflow-hidden group ${
+            <div
+              key={`${project.title}-${index}`}
+              onClick={() => handleProjectClick(project)}
+              className={`rounded-xl p-6 transition-all duration-300 hover:scale-[1.02] relative overflow-hidden group ${
                 project.link && project.link.trim() !== '' ? 'cursor-pointer' : 'cursor-default'
               }`}
               style={{
@@ -432,47 +441,33 @@ export function Credits() {
                 border: `1px solid var(--theme-border)`,
               }}
             >
-  {/* Фоновое изображение */}
-  {project.backgroundImage && project.backgroundImage.trim() !== '' && (
-               <>
-                <div
-                  className="absolute inset-0 transition-opacity duration-300"
-                  style={{
-                    backgroundImage: `url(${project.backgroundImage})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    opacity: 0.35,
-                  }}
-                />
-              <div
-  className="absolute inset-0"
-  style={{
-    background: 'linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 100%)',
-  }}
-/>
-                 </>
-              )}
-        
-  
-  {/* Иконка ссылки, если есть link */}
-  {project.link && (
-                <ExternalLink
-                  size={14}
-                  className="absolute top-2 right-2 z-20"
-                  style={{ color: 'var(--theme-accent)' }}
-                />
+              {/* Background Image */}
+              {project.backgroundImage && project.backgroundImage.trim() !== '' && (
+                <>
+                  {/* Image layer */}
+                  <div
+                    className="absolute inset-0 transition-opacity duration-300"
+                    style={{
+                      backgroundImage: `url(${project.backgroundImage})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      opacity: 0.35,
+                    }}
+                  />
+                  {/* Dark overlay for text readability */}
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      background: 'linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 100%)',
+                    }}
+                  />
+                </>
               )}
 
-    {/* Затемняющий слой для читаемости текста (можно сделать условным, если нужно) */}
-    {/* <div
-      className="absolute inset-0"
-      style={{
-        backgroundColor: 'rgba(0, 0, 0, 0.1)',
-      }}
-    /> */}
-     <div className="relative z-10">
-              {/* Header */}
-              <div className="flex items-start justify-between mb-4">
+              {/* Content */}
+              <div className="relative z-10">
+                {/* Header */}
+                <div className="flex items-start justify-between mb-4">
                   <div className="flex-1 pr-2">
                     <h3
                       className="text-lg font-semibold mb-1 flex items-center gap-2"
@@ -483,62 +478,62 @@ export function Credits() {
                         <ExternalLink size={14} style={{ color: 'var(--theme-accent)' }} />
                       )}
                     </h3>
+                    <div
+                      className="flex items-center gap-1 text-sm"
+                      style={{ color: 'var(--theme-text-muted)' }}
+                    >
+                      <Calendar size={14} />
+                      {project.year}
+                      {!project.released && (
+                        <span
+                          className="ml-2 px-2 py-0.5 text-xs rounded-full"
+                          style={{
+                            backgroundColor: 'var(--theme-accent)',
+                            color: 'white',
+                          }}
+                        >
+                          {language === 'zh' ? '未上映' : language === 'ru' ? 'Не вышел' : 'Unreleased'}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <span
+                    className="px-2 py-1 text-xs font-medium rounded-full whitespace-nowrap"
+                    style={{
+                      backgroundColor: 'var(--theme-bg-secondary)',
+                      color: 'var(--theme-accent)',
+                    }}
+                  >
+                    {getRoleLabel(project.roleType) as string}
+                  </span>
+                </div>
+
+                {/* Details */}
+                <div className="space-y-2">
                   <div
-                    className="flex items-center gap-1 text-sm"
+                    className="flex items-center gap-2 text-sm"
                     style={{ color: 'var(--theme-text-muted)' }}
                   >
-                    <Calendar size={14} />
-                    {project.year}
-                    {!project.released && (
-                      <span
-                        className="ml-2 px-2 py-0.5 text-xs rounded-full"
-                        style={{
-                          backgroundColor: 'var(--theme-accent)',
-                          color: 'white',
-                        }}
-                      >
-                        {language === 'zh' ? '未上映' : language === 'ru' ? 'Не вышел' : 'Unreleased'}
-                      </span>
-                    )}
+                    <User size={14} />
+                    <span>{project.role}</span>
                   </div>
-                </div>
-                <span
-                  className="px-2 py-1 text-xs font-medium rounded-full"
-                  style={{
-                    backgroundColor: 'var(--theme-bg-secondary)',
-                    color: 'var(--theme-accent)',
-                  }}
-                >
-                  {getRoleLabel(project.roleType) as string}
-                </span>
-              </div>
-
-              {/* Details */}
-              <div className="space-y-2">
-                <div
-                  className="flex items-center gap-2 text-sm"
-                  style={{ color: 'var(--theme-text-muted)' }}
-                >
-                  <User size={14} />
-                  <span>{project.role}</span>
-                </div>
-                <div
-                  className="flex items-center gap-2 text-sm"
-                  style={{ color: 'var(--theme-text-muted)' }}
-                >
-                  <Tag size={14} />
-                  <span>{project.genre}</span>
-                </div>
-                <div
-                  className="flex items-center gap-2 text-sm"
-                  style={{ color: 'var(--theme-text-muted)' }}
-                >
-                  <Monitor size={14} />
-                  <span>{project.platform}</span>
+                  <div
+                    className="flex items-center gap-2 text-sm"
+                    style={{ color: 'var(--theme-text-muted)' }}
+                  >
+                    <Tag size={14} />
+                    <span>{project.genre}</span>
+                  </div>
+                  <div
+                    className="flex items-center gap-2 text-sm"
+                    style={{ color: 'var(--theme-text-muted)' }}
+                  >
+                    <Monitor size={14} />
+                    <span>{project.platform}</span>
+                  </div>
                 </div>
               </div>
             </div>
-    </div> 
           ))}
         </div>
       </div>
