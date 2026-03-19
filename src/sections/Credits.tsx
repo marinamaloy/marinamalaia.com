@@ -186,8 +186,8 @@ const projects: Project[] = [
     platform: 'CCTV-6',
     released: true,
     image: '/images/credits/heart.jpeg',
-    link: '', // ← Вставьте ссылку здесь
-  backgroundImage: '/images/credits/heart.jpeg', // ← Вставьте путь к изображению здесь
+    link: '.https://vip.1905.com/play/1657547.shtml?__hz=1aa48fc4880bb0c9&fr=baidu_aladdin_vip_add', // ← Вставьте ссылку здесь
+  backgroundImage: 'images/credits/heart.jpeg', // ← Вставьте путь к изображению здесь
   },
   {
     year: '2021',
