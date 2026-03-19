@@ -434,6 +434,7 @@ export function Credits() {
             >
   {/* Фоновое изображение */}
   {project.backgroundImage && project.backgroundImage.trim() !== '' && (
+               <>
                 <div
                   className="absolute inset-0 transition-opacity duration-300"
                   style={{
@@ -449,6 +450,7 @@ export function Credits() {
     background: 'linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 100%)',
   }}
 />
+                 </>
               )}
         
   
