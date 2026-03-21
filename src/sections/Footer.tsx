@@ -38,21 +38,6 @@ export function Footer() {
         </div>
       </div>
 
-
-      {/* Baidu Tongji Placeholder */}
-      {/* 
-        Baidu Tongji Analytics Code Placeholder
-        Insert your Baidu Tongji tracking code here:
-        <script>
-          var _hmt = _hmt || [];
-          (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?YOUR_TRACKING_ID";
-            var s = document.getElementsByTagName("script")[0]; 
-            s.parentNode.insertBefore(hm, s);
-          })();
-        </script>
-      */}
     </footer>
   );
 }
