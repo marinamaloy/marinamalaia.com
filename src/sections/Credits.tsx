@@ -106,7 +106,7 @@ const projects: Project[] = [
     platform: 'CCTV-6',
     released: false,
     link: '',
-    backgroundImage: '',
+    backgroundImage: '/images/credits/shooter.JPG',
   },
   {
     year: '2026',
@@ -119,7 +119,7 @@ const projects: Project[] = [
     platform: 'iQIYI',
     released: false,
     link: '',
-    backgroundImage: '',
+    backgroundImage: '/images/credits/ball.JPEG',
   },
   {
     year: '2021',
@@ -132,7 +132,7 @@ const projects: Project[] = [
     platform: 'Unreleased',
     released: false,
     link: '',
-    backgroundImage: '',
+    backgroundImage: '/images/credits/yueluo.JPEG',
   },
   {
     year: '2021',
@@ -145,7 +145,7 @@ const projects: Project[] = [
     platform: 'Tencent Video',
     released: true,
     link: 'https://youtu.be/82TjsH-7v0c?si=XkZzEqCNpBUeDYCm&t=1242',
-    backgroundImage: '',
+    backgroundImage: '/images/credits/ebola.JPEG',
   },
   {
     year: '2020',
@@ -158,20 +158,7 @@ const projects: Project[] = [
     platform: 'Mango TV',
     released: true,
     link: 'https://youtu.be/ak7ednK7yQo?si=cA3I5wLdhzZ6lET_&t=174',
-    backgroundImage: '',
-  },
-  {
-    year: '2021',
-    title: 'Sunshine of My Life',
-    titleChinese: '若你安好便是晴天',
-    category: 'TV Series',
-    role: 'Store Manager',
-    roleType: 'Recurring',
-    genre: 'Urban Romance',
-    platform: 'Dragon TV',
-    released: false,
-    link: 'https://youtu.be/c40g89p2_4w?si=UZfKhBAKXs-x8Yz0&t=195',
-    backgroundImage: '',
+    backgroundImage: '/images/credits/centimeter.jpg',
   },
   {
     year: '2021',
@@ -184,7 +171,7 @@ const projects: Project[] = [
     platform: 'Cinema',
     released: false,
     link: '',
-    backgroundImage: '',
+    backgroundImage: '/images/credits/karl.jpeg',
   },
   {
     year: '2024',
@@ -210,7 +197,7 @@ const projects: Project[] = [
     platform: 'iQIYI',
     released: true,
     link: 'https://www.iq.com/album/mutation-on-mars-2021-1w2tibmx5b8?lang=en_us',
-    backgroundImage: '',
+    backgroundImage: '/images/credits/mars.JPG',
   },
   {
     year: '2021',
@@ -223,7 +210,7 @@ const projects: Project[] = [
     platform: 'iQIYI',
     released: true,
     link: 'https://www.iq.com/album/escape-of-shark-2021-1zj5sr5ay7c?lang=en_us',
-    backgroundImage: '',
+    backgroundImage: '/images/credits/shark.jpg',
   },
   {
     year: '2023',
@@ -236,7 +223,7 @@ const projects: Project[] = [
     platform: 'CCTV-6',
     released: true,
     link: 'https://vip.1905.com/play/1614200.shtml?utm_source=360&utm_medium=cps&utm_campaign=1&__hz=ccb0989662211f61',
-    backgroundImage: '',
+    backgroundImage: '/images/credits/harbin.jpeg',
   },
   {
     year: '2022',
@@ -249,7 +236,7 @@ const projects: Project[] = [
     platform: 'CCTV-6',
     released: true,
     link: 'https://www.yingbas.com/bofang/97923-1-1.html',
-    backgroundImage: '',
+    backgroundImage: '/images/credits/memory.jpeg',
   },
   {
     year: '2030',
@@ -262,7 +249,7 @@ const projects: Project[] = [
     platform: 'Unreleased',
     released: false,
     link: '',
-    backgroundImage: '',
+    backgroundImage: '/images/credits/alatan.JPG',
   },
   
   {
@@ -276,7 +263,7 @@ const projects: Project[] = [
     platform: 'Cinema',
     released: true,
     link: 'https://kissasian.cam/escape-from-the-21st-century-2025/',
-    backgroundImage: '',
+    backgroundImage: '/images/credits/escape.png',
   },
   {
     year: '2019',
@@ -302,7 +289,7 @@ const projects: Project[] = [
     platform: 'Tencent Video',
     released: true,
     link: 'https://youtu.be/myiFuQP1V7c?si=j4qmq9MQAbN2bCpz&t=2431',
-    backgroundImage: '',
+    backgroundImage: '/images/credits/mystery.JPG',
   },
   {
     year: '2017',
@@ -315,7 +302,7 @@ const projects: Project[] = [
     platform: 'CCTV-1',
     released: true,
     link: 'https://tv.cctv.com/2017/11/03/VIDEl2JlJVhnObkjgjDG1Q6k171103.shtml',
-    backgroundImage: '',
+    backgroundImage: '/images/credits/green.jpeg',
   },
   {
     year: '2030',
@@ -328,7 +315,7 @@ const projects: Project[] = [
     platform: 'iQIYI',
     released: false,
     link: '',
-    backgroundImage: '',
+    backgroundImage: '/images/credits/newlove.JPG',
   },
 ];
 
