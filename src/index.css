@@ -70,7 +70,7 @@
     --theme-bg: #faf8f5;
     --theme-bg-secondary: #f5f0e8;
     --theme-text: #2d2416;
-    --theme-text-muted: #b8860b;
+    --theme-text-muted: #2d2416;
     --theme-accent: #b8860b;
     --theme-accent-transparent: color-mix(in srgb, var(--theme-accent), transparent 50%);
     --theme-accent-secondary: #d4a84b;
