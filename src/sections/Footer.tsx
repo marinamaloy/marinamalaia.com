@@ -37,6 +37,15 @@ export function Footer() {
           </p>
         </div>
       </div>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?8e8a2185d7382f4d697535759118a17d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 
       {/* Baidu Tongji Placeholder */}
       {/* 
