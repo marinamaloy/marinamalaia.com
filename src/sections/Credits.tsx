@@ -19,7 +19,7 @@ interface Project {
 const projects: Project[] = [
   {
     year: '2025',
-    title: 'Limited time, Infinite pull',
+    title: 'Limited Time, Infinite Pull',
     titleChinese: '',
     category: 'Short Drama',
     role: 'Luna',
@@ -27,7 +27,7 @@ const projects: Project[] = [
     genre: 'Short Drama',
     platform: 'Short Max',
     released: true,
-    link: '', // Добавьте ссылку здесь
+    link: 'https://www.shorttv.live/drama/limited-time-infinite-pull-13483', // Добавьте ссылку здесь
     backgroundImage: '', // Добавьте путь к изображению здесь
   },
   {
@@ -40,12 +40,12 @@ const projects: Project[] = [
     genre: 'Short Drama',
     platform: 'Short Max',
     released: true,
-    link: '',
+    link: 'https://www.shorttv.live/drama/big-shot-4792',
     backgroundImage: '',
   },
   {
     year: '2025',
-    title: 'When the love shot backwards',
+    title: 'When the Love Shot Backwards',
     titleChinese: '',
     category: 'Short Drama',
     role: 'Alex',
@@ -53,12 +53,12 @@ const projects: Project[] = [
     genre: 'Short Drama',
     platform: 'Net Short',
     released: true,
-    link: '',
+    link: 'https://netshort.com/episode/when-love-shot-backward-new-5-1905449446395936769',
     backgroundImage: '',
   },
   {
     year: '2024',
-    title: 'Mommy by Day, CEO\'s wife by night',
+    title: 'Mommy by Day, CEO\'s Wife by Night',
     titleChinese: '',
     category: 'Short Drama',
     role: 'Jessica',
@@ -66,12 +66,12 @@ const projects: Project[] = [
     genre: 'Short Drama',
     platform: 'FlickReels',
     released: true,
-    link: '',
+    link: 'https://www.reelshort.com/movie/mommy-by-day-ceo-s-wife-by-night-6982f816dd4450529f0ac76f',
     backgroundImage: '',
   },
   {
     year: '2023',
-    title: 'The lost Heiress of Bilionaire family',
+    title: 'The Lost Heiress of Bilionaire Family',
     titleChinese: '',
     category: 'Short Drama',
     role: 'Emma',
@@ -79,12 +79,12 @@ const projects: Project[] = [
     genre: 'Short Drama',
     platform: 'FlickReels',
     released: true,
-    link: '',
+    link: 'https://www.flickreels.net/movie/the-lost-heiress-of-a-billionaire-family-100',
     backgroundImage: '',
   },
   {
     year: '2025',
-    title: 'The queen reclaims her throne',
+    title: 'The Queen Reclaims Her Throne',
     titleChinese: '',
     category: 'Short Drama',
     role: 'Rachel',
@@ -92,7 +92,7 @@ const projects: Project[] = [
     genre: 'Short Drama',
     platform: 'Happy Short',
     released: true,
-    link: '',
+    link: 'https://www.happyshorttv.com/shortlink?sid=554109&vid=241438',
     backgroundImage: '/images/credits/queen.JPG',
   },
   {
@@ -144,7 +144,7 @@ const projects: Project[] = [
     genre: 'Medical Drama',
     platform: 'Tencent Video',
     released: true,
-    link: '',
+    link: 'https://youtu.be/82TjsH-7v0c?si=XkZzEqCNpBUeDYCm&t=1242',
     backgroundImage: '',
   },
   {
@@ -157,7 +157,7 @@ const projects: Project[] = [
     genre: 'Urban Drama',
     platform: 'Mango TV',
     released: true,
-    link: '',
+    link: 'https://youtu.be/ak7ednK7yQo?si=cA3I5wLdhzZ6lET_&t=174',
     backgroundImage: '',
   },
   {
@@ -170,7 +170,7 @@ const projects: Project[] = [
     genre: 'Urban Romance',
     platform: 'Dragon TV',
     released: false,
-    link: '',
+    link: 'https://youtu.be/c40g89p2_4w?si=UZfKhBAKXs-x8Yz0&t=195',
     backgroundImage: '',
   },
   {
@@ -209,7 +209,7 @@ const projects: Project[] = [
     genre: 'Sci-fi Thriller',
     platform: 'iQIYI',
     released: true,
-    link: '',
+    link: 'https://www.iq.com/album/mutation-on-mars-2021-1w2tibmx5b8?lang=en_us',
     backgroundImage: '',
   },
   {
@@ -222,7 +222,7 @@ const projects: Project[] = [
     genre: 'Disaster Thriller',
     platform: 'iQIYI',
     released: true,
-    link: '',
+    link: 'https://www.iq.com/album/escape-of-shark-2021-1zj5sr5ay7c?lang=en_us',
     backgroundImage: '',
   },
   {
@@ -235,7 +235,7 @@ const projects: Project[] = [
     genre: 'Historical Epic',
     platform: 'CCTV-6',
     released: true,
-    link: '',
+    link: 'https://vip.1905.com/play/1614200.shtml?utm_source=360&utm_medium=cps&utm_campaign=1&__hz=ccb0989662211f61',
     backgroundImage: '',
   },
   {
@@ -248,7 +248,7 @@ const projects: Project[] = [
     genre: 'Military War',
     platform: 'CCTV-6',
     released: true,
-    link: '',
+    link: 'https://www.yingbas.com/bofang/97923-1-1.html',
     backgroundImage: '',
   },
   {
@@ -275,7 +275,7 @@ const projects: Project[] = [
     genre: 'Romantic Sci-fi',
     platform: 'Cinema',
     released: true,
-    link: '',
+    link: 'https://kissasian.cam/escape-from-the-21st-century-2025/',
     backgroundImage: '',
   },
   {
@@ -288,7 +288,7 @@ const projects: Project[] = [
     genre: 'Family Drama',
     platform: 'CCTV-1',
     released: true,
-    link: '',
+    link: 'https://youtu.be/IMySuECIHi8?si=Rr7uXj9qoQCUv82X&t=1837',
     backgroundImage: '/images/credits/aomen.jpg',
   },
   {
@@ -301,7 +301,7 @@ const projects: Project[] = [
     genre: 'Suspense Drama',
     platform: 'Tencent Video',
     released: true,
-    link: '',
+    link: 'https://youtu.be/myiFuQP1V7c?si=j4qmq9MQAbN2bCpz&t=2431',
     backgroundImage: '',
   },
   {
@@ -314,7 +314,7 @@ const projects: Project[] = [
     genre: 'Rural Drama',
     platform: 'CCTV-1',
     released: true,
-    link: '',
+    link: 'https://tv.cctv.com/2017/11/03/VIDEl2JlJVhnObkjgjDG1Q6k171103.shtml',
     backgroundImage: '',
   },
   {
