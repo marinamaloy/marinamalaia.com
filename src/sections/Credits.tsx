@@ -28,7 +28,7 @@ const projects: Project[] = [
     platform: 'Short Max',
     released: true,
     link: 'https://www.shorttv.live/drama/limited-time-infinite-pull-13483', // Добавьте ссылку здесь
-    backgroundImage: '', // Добавьте путь к изображению здесь
+    backgroundImage: '/images/credits/limited.JPEG', // Добавьте путь к изображению здесь
   },
   {
     year: '2024',
@@ -41,7 +41,7 @@ const projects: Project[] = [
     platform: 'Short Max',
     released: true,
     link: 'https://www.shorttv.live/drama/big-shot-4792',
-    backgroundImage: '',
+    backgroundImage: '/images/credits/bigshot.JPEG',
   },
   {
     year: '2025',
@@ -54,7 +54,7 @@ const projects: Project[] = [
     platform: 'Net Short',
     released: true,
     link: 'https://netshort.com/episode/when-love-shot-backward-new-5-1905449446395936769',
-    backgroundImage: '',
+    backgroundImage: '/images/credits/shot.JPEG',
   },
   {
     year: '2024',
@@ -67,7 +67,7 @@ const projects: Project[] = [
     platform: 'FlickReels',
     released: true,
     link: 'https://www.reelshort.com/movie/mommy-by-day-ceo-s-wife-by-night-6982f816dd4450529f0ac76f',
-    backgroundImage: '',
+    backgroundImage: '/images/credits/mommy.JPG',
   },
   {
     year: '2023',
@@ -80,7 +80,7 @@ const projects: Project[] = [
     platform: 'FlickReels',
     released: true,
     link: 'https://www.flickreels.net/movie/the-lost-heiress-of-a-billionaire-family-100',
-    backgroundImage: '',
+    backgroundImage: '/images/credits/thelost.JPEG',
   },
   {
     year: '2025',
@@ -93,7 +93,7 @@ const projects: Project[] = [
     platform: 'Happy Short',
     released: true,
     link: 'https://www.happyshorttv.com/shortlink?sid=554109&vid=241438',
-    backgroundImage: '/images/credits/queen.JPG',
+    backgroundImage: '/images/credits/queen.JPEG',
   },
   {
     year: '2025',
